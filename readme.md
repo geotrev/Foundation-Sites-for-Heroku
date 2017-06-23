@@ -60,6 +60,16 @@ Then open the folder in your command line, and install the needed dependencies:
 cd projectname
 npm install
 bower install
+
+# heroku stuff
+heroku buildpacks:add heroku/ruby
+heroku buildpacks:set --index 1 heroku/nodejs
+```
+
+Feel free to set a custom ruby version in `.ruby-version` as well.
+
+```bash
+2.2.6
 ```
 
 Finally, run `npm start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
